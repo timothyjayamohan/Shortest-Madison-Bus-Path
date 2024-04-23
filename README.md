@@ -3,7 +3,10 @@ This project utilizes the Dijkstra algorithm to compute the shortest path from a
 
 
 Timothy Jayamohan in charge of Backend Development
-Files responsible: SMBPBackendBD.java
+
+
+Files responsible: SMBPBackendBD.java, SMBPBackendInterface.java
+
 Backend Functionality Description:
 The backend will interact closely with the Data Wrangler’s code and the Algorithm Engineer’s code in order to create a unified class that can load, manipulate, and find the shortest path in a weighted graph.
 
