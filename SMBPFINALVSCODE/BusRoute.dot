@@ -1,0 +1,117 @@
+/**
+* This is the DOT format representation of Route 2, 4, 38, 44, 80, 81, 82, 84 of the Madison Bus Route
+*/
+digraph G {
+  // Route 2 North
+  edge [color = black]
+  WestTransferPoint -> Sheboygan_EauClaire [ label = 6 ]
+  Sheboygan_EauClaire -> UniversityBay_University [ label = 9 ]
+  UniversityBay_University -> University_Breese [ label = 8 ]
+  University_Breese -> Main_Carroll [ label = 12 ]
+  Main_Carroll -> Johnson_Ingersoll [ label = 7 ]
+  Johnson_Ingersoll -> Fordem_McGuire [ label = 4 ]
+  Johnson_Ingersoll -> Sherman_ShermanTer [ label = 4 ] 
+  Fordem_McGuire -> NorthTransferPoint [ label = 5 ]
+  Sherman_ShermanTer -> NorthTransferPoint [ label = 5 ]
+
+  // Route 2 West
+  NorthTransferPoint -> Sherman_ShermanTer [ label = 6 ]
+  NorthTransferPoint -> Fordem_McGuire [ label = 5 ]
+  Sherman_ShermanTer -> Gorham_Ingersoll [ label = 4 ]
+  Fordem_McGuire -> Gorham_Ingersoll [ label = 5 ]
+  Gorham_Ingersoll -> Mifflin_Pinckney [ label = 7 ]
+  Mifflin_Pinckney -> University_Park [ label = 7 ]
+  University_Park -> Highland_University [ label = 8 ]
+  Highland_University -> Sheboygan_EauClaire [ label = 13 ]
+  Sheboygan_EauClaire -> WestTransferPoint [ label = 6 ]
+
+  // Route 4 North 
+  edge [color = sienna]
+  SouthTransferPoint -> Park_FishHatchery [ label = 7 ]
+  Park_FishHatchery -> Johnson_Park [ label = 9 ]
+  Johnson_Park -> Main_Carroll [ label = 9 ]
+  Main_Carroll -> Jenifer_Ingersoll [ label = 7 ]
+  Jenifer_Ingersoll -> Winnebago_Atwood [ label = 4 ]
+  Winnebago_Atwood -> Oak_EastWashington [ label = 6 ]
+  Oak_EastWashington -> NorthTransferPoint [ label = 8 ]
+
+  //Route 4 South
+  NorthTransferPoint -> Oak_EastWashington [ label = 6 ]
+  Oak_EastWashington -> Winnebago_Atwood [ label = 5 ]
+  Winnebago_Atwood -> Jenifer_Ingersoll [ label = 5 ]
+  Jenifer_Ingersoll -> Mifflin_Pinckney [ label = 9 ]
+  Mifflin_Pinckney -> University_Park [ label = 9 ]
+  University_Park -> Park_Erin [ label = 7 ]
+  Park_Erin -> SouthTransferPoint [ label = 9 ]
+
+
+
+  // Route 38 West
+  edge [color = turquoise]
+  Frontage_Pflaum -> Dempsey_CottageGrove [ label = 12 ]
+  Dempsey_CottageGrove -> Division_Oakridge [ label = 11 ]
+  Division_Oakridge -> Jenifer_Ingersoll [ label = 5 ]
+  Jenifer_Ingersoll -> Wilson_MLKJr [ label = 6 ]
+  Wilson_MLKJr -> University_Park [ label = 9 ]
+  University_Park -> Linden_Henry [ label = 4 ]
+  Linden_Henry -> Highland_WaismanCenter [ label = 7 ]
+  Highland_WaismanCenter -> Whitney_University [ label = 9 ]
+
+  // Route 38 East
+  Whitney_University -> UniversityBay_University [ label = 8 ]
+  UniversityBay_University -> Linden_Henry [ label = 9 ]
+  Linden_Henry -> Johnson_Park [ label = 5 ]
+  Johnson_Park -> Main_Carroll [ label = 9 ]
+  Main_Carroll -> Jenifer_Ingersoll [ label = 7 ]
+  Jenifer_Ingersoll -> Division_Oakridge [ label = 5 ]
+  Division_Oakridge -> CottageGrove_Dempsey [ label = 9 ]
+  CottageGrove_Dempsey -> Frontage_Pflaum [ label = 11 ]
+  CottageGrove_Dempsey -> Dempsey_CottageGrove [ label = 0 ]
+  Dempsey_CottageGrove -> CottageGrove_Dempsey [ label = 0 ]
+
+  // Route 44 North
+  edge [color = grey]
+  SouthTransferPoint -> Park_FishHatchery [ label = 11 ]
+  Park_FishHatchery -> Linden_Henry [ label = 13 ]
+  Linden_Henry -> University_Highland [ label = 8 ]
+  University_Highland -> Highland_University [ label = 0 ]
+  Highland_University -> University_Highland [ label = 0 ]
+
+  // Route 44 South
+  Highland_University -> Linden_Henry [ label = 8 ]
+  Linden_Henry -> Park_Erin [ label = 12 ]
+  Park_Erin -> SouthTransferPoint [ label = 9 ]
+
+  // Route 80
+  edge [color = blue]
+  Langdon_MemorialUnion -> Observatory_Elm [ label = 5 ]
+  Observatory_Elm -> University_Lot60 [ label = 4 ]
+  University_Lot60 -> EagleHeights_BrownShelter [ label = 3 ]
+  EagleHeights_BrownShelter -> Marsh_Lot76 [ label = 6 ]
+  Marsh_Lot76 -> Observatory_Elm [ label = 4 ]
+  Observatory_Elm -> Randall_Engineering [ label = 6 ]
+  Randall_Engineering -> Langdon_MemorialUnion [ label = 7 ]
+ 
+ // Route 81
+ edge [color = red]
+ Langdon_MemorialUnion -> Blair_Johnson [ label = 7 ]
+ Blair_Johnson -> WWashington_Bedford [ label = 10 ]
+ WWashington_Bedford -> Langdon_MemorialUnion [ label = 10 ]
+
+ // Route 82
+ edge [color = orange]
+ Langdon_MemorialUnion -> Walnut_Observatory [ label = 8 ]
+ Walnut_Observatory -> Regent_Breese [ label = 8 ]
+ Regent_Breese -> Langdon_MemorialUnion [ label = 10 ]
+
+ // Route 84
+ edge [color = purple]
+ EagleHeights_BrownShelter -> LakeMendota_EagleHeights [ label = 3 ]
+ LakeMendota_EagleHeights -> Highland_UWHospital [ label = 5 ]
+ Highland_UWHospital -> Observatory_Easterday [ label = 4 ]
+ Observatory_Easterday -> Linden_Charter [ label = 4 ]
+ Linden_Charter -> Linden_Babcock [ label = 1 ]
+ Linden_Babcock -> Observatory_Easterday [ label = 3 ]
+ Observatory_Easterday -> Highland_UWHospital [ label = 3 ]
+ Highland_UWHospital -> EagleHeights_BrownShelter [ label = 4 ]
+}
